@@ -1,9 +1,9 @@
-﻿namespace MathNet.Symbolics
+﻿namespace Com.Panotec.MathNet.Symbolics
 
 open Microsoft.FSharp.Quotations
 open Microsoft.FSharp.Quotations.Patterns
 open Microsoft.FSharp.Quotations.DerivedPatterns
-open MathNet.Symbolics
+open Com.Panotec.MathNet.Symbolics
 
 open Operators
 

@@ -1,7 +1,7 @@
-﻿namespace MathNet.Symbolics
+﻿namespace Com.Panotec.MathNet.Symbolics
 
 open MathNet.Numerics
-open MathNet.Symbolics
+open Com.Panotec.MathNet.Symbolics
 
 /// Enriched expression tree which includes an enrichment element on every node.
 /// Not intended for algebraic manipulations, but can be converted from and to Expression.

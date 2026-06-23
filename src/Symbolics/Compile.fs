@@ -1,8 +1,8 @@
-﻿namespace MathNet.Symbolics
+﻿namespace Com.Panotec.MathNet.Symbolics
 
 open System
 open System.Linq.Expressions
-open MathNet.Symbolics
+open Com.Panotec.MathNet.Symbolics
 open MathNet.Numerics
 
 module Compile =

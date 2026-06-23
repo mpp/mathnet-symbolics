@@ -1,7 +1,7 @@
-﻿namespace MathNet.Symbolics
+﻿namespace Com.Panotec.MathNet.Symbolics
 
 open System
-open MathNet.Symbolics
+open Com.Panotec.MathNet.Symbolics
 open MathNet.Numerics
 open System.Linq.Expressions
 
@@ -15,7 +15,7 @@ module Linq =
         let map2 f a b = a |> Option.bind (fun a' -> b |> Option.map (fun b' -> f a' b'))
 
     [<CompiledName("Parse")>]
-    let rec parse (q:Expression) : MathNet.Symbolics.Expression =
+    let rec parse (q:Expression) : Com.Panotec.MathNet.Symbolics.Expression =
         match q.NodeType, q with
         | ExpressionType.UnaryPlus, (:? UnaryExpression as e) -> +(parse e.Operand)
         | ExpressionType.Negate, (:? UnaryExpression as e) -> -(parse e.Operand)
@@ -40,7 +40,7 @@ module Linq =
         | Product ax -> product <| List.map denominator ax
         | _ -> one
 
-    let private toLambda (expr : MathNet.Symbolics.Expression) (args : Symbol list) (valueType : Type) (mathType : Type) constant value add mul div pow min max atan2 log abs besselj bessely besseli besselk besseliratio besselkratio hankelh1 hankelh2 : LambdaExpression option =
+    let private toLambda (expr : Com.Panotec.MathNet.Symbolics.Expression) (args : Symbol list) (valueType : Type) (mathType : Type) constant value add mul div pow min max atan2 log abs besselj bessely besseli besselk besseliratio besselkratio hankelh1 hankelh2 : LambdaExpression option =
         let valueTypeArr1 = [| valueType |]
         let valueTypeArr2 = [| valueType; valueType |]
         let argName = function |Symbol(n) -> n
@@ -52,7 +52,7 @@ module Linq =
                 | _ -> None) None paramList
         let mathCall1 (name : string) (a : Expression) = Expression.Call(mathType.GetMethod(name, valueTypeArr1), a) :> Expression
         let mathCall2 (name : string) (a : Expression) (b : Expression) = Expression.Call(mathType.GetMethod(name, valueTypeArr2), a, b) :> Expression
-        let rec convertExpr : MathNet.Symbolics.Expression -> Expression option = function
+        let rec convertExpr : Com.Panotec.MathNet.Symbolics.Expression -> Expression option = function
             | Identifier(sym) ->
                 Option.map (fun x -> x :> Expression) (getParam sym)
             | Argument(sym) ->
@@ -198,7 +198,7 @@ module Linq =
         Option.map (fun body -> Expression.Lambda(body, paramList)) (convertExpr simplifiedBody)
 
     [<CompiledName("FormatLambda")>]
-    let formatLambda (expr : MathNet.Symbolics.Expression) (args : Symbol list) : LambdaExpression option =
+    let formatLambda (expr : Com.Panotec.MathNet.Symbolics.Expression) (args : Symbol list) : LambdaExpression option =
         let value = function
             | Value.Approximation a -> Some (Expression.Constant a.RealValue :> Expression)
             | Value.NegativeInfinity -> Some (Expression.Constant System.Double.NegativeInfinity :> Expression)
@@ -233,7 +233,7 @@ module Linq =
         toLambda expr args valueType mathType constant value add mul div pow min max atan2 log abs besselj bessely besseli besselk besseliratio besselkratio hankelh1 hankelh2
 
     [<CompiledName("FormatComplexLambda")>]
-    let formatComplexLambda (expr : MathNet.Symbolics.Expression) (args : Symbol list) : LambdaExpression option =
+    let formatComplexLambda (expr : Com.Panotec.MathNet.Symbolics.Expression) (args : Symbol list) : LambdaExpression option =
         let value = function
             | Value.Approximation a -> Some (Expression.Constant a.ComplexValue :> Expression)
             | Value.NegativeInfinity -> Some (Expression.Constant (complex System.Double.NegativeInfinity 0.0) :> Expression)

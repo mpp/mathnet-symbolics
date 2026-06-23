@@ -1,7 +1,7 @@
-﻿namespace MathNet.Symbolics.Tests.Operators.Trigonometry
+﻿namespace Com.Panotec.MathNet.Symbolics.Tests.Operators.Trigonometry
 
 open NUnit.Framework
-open MathNet.Symbolics
+open Com.Panotec.MathNet.Symbolics
 
 open Operators
 open VariableSets.Alphabet

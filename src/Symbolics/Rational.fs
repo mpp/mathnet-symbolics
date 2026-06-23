@@ -1,6 +1,6 @@
-﻿namespace MathNet.Symbolics
+﻿namespace Com.Panotec.MathNet.Symbolics
 
-open MathNet.Symbolics
+open Com.Panotec.MathNet.Symbolics
 
 open ExpressionPatterns
 open Operators

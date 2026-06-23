@@ -1,10 +1,10 @@
-﻿namespace MathNet.Symbolics
+﻿namespace Com.Panotec.MathNet.Symbolics
 
 open System.Xml.Linq
 open System.IO
 
 open MathNet.Numerics
-open MathNet.Symbolics
+open Com.Panotec.MathNet.Symbolics
 
 
 module private MathMLParser =

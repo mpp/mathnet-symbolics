@@ -1,4 +1,4 @@
-﻿namespace MathNet.Symbolics
+﻿namespace Com.Panotec.MathNet.Symbolics
 
 type Symbol = Symbol of string
 

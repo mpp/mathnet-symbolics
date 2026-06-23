@@ -1,10 +1,10 @@
-namespace MathNet.Symbolics.Tests
+namespace Com.Panotec.MathNet.Symbolics.Tests
 
 open NUnit.Framework
 open FsUnit
 
 open MathNet.Numerics
-open MathNet.Symbolics
+open Com.Panotec.MathNet.Symbolics
 
 open Operators
 open VariableSets.Alphabet
@@ -99,7 +99,7 @@ module Expressions =
     [<Test>]
     let ``Expressions are always in auto-simplified form`` () =
 
-        // readable output is F# interactive thanks to Text.format printer added in MathNet.Symbolics.fsx
+        // readable output is F# interactive thanks to Text.format printer added in Com.Panotec.MathNet.Symbolics.fsx
 
         x + y ==> "x + y"
         y + x ==> "x + y"

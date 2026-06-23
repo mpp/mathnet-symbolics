@@ -4,7 +4,7 @@ module Global
 open FsUnitTyped
 
 open System.Collections.Generic
-open MathNet.Symbolics
+open Com.Panotec.MathNet.Symbolics
 
 open Operators
 

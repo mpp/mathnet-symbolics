@@ -1,7 +1,7 @@
-﻿namespace MathNet.Symbolics
+﻿namespace Com.Panotec.MathNet.Symbolics
 
 open MathNet.Numerics
-open MathNet.Symbolics
+open Com.Panotec.MathNet.Symbolics
 open Microsoft.FSharp.Reflection
 open Operators
 

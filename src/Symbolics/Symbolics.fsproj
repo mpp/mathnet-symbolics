@@ -2,14 +2,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFrameworks>net461;net45;netstandard2.0</TargetFrameworks>
-    <AssemblyName>MathNet.Symbolics</AssemblyName>
-    <RootNamespace>MathNet.Symbolics</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Com.Panotec.MathNet.Symbolics</AssemblyName>
+    <RootNamespace>Com.Panotec.MathNet.Symbolics</RootNamespace>
     <IsPackable>true</IsPackable>
-    <PackageId>MathNet.Symbolics</PackageId>
+    <PackageId>Com.Panotec.MathNet.Symbolics</PackageId>
     <VersionPrefix>0.24.0</VersionPrefix>
     <VersionSuffix></VersionSuffix>
-    <Title>Math.NET Symbolics</Title>
+    <Title>Com.Panotec MathNet.Symbolics (fork)</Title>
     <Description>Math.NET Symbolics is a basic open source computer algebra library for .Net and Mono. Written in F# but works well in C# as well. Supports .Net Framework 4.5 or higher and .Net Standard 2.0 or higher, on Windows, Linux and Mac.$(DescriptionSuffix)</Description>
     <PackageReleaseNotes>Usability: Operators module now provides I, E and Pi (instead of pi) (breaking)
 Usability: VariableSets.Alphabet provides a-z variables that can be opened on demand

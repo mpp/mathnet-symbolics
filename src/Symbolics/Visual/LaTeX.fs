@@ -1,8 +1,8 @@
-﻿namespace MathNet.Symbolics
+﻿namespace Com.Panotec.MathNet.Symbolics
 
 open System.IO
 open System.Text
-open MathNet.Symbolics
+open Com.Panotec.MathNet.Symbolics
 
 module private LaTeXFormatter =
 

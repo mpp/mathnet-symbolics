@@ -1,4 +1,4 @@
-﻿namespace MathNet.Symbolics
+﻿namespace Com.Panotec.MathNet.Symbolics
 
 [<RequireQualifiedAccess>]
 type ValueType =

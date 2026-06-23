@@ -1,7 +1,7 @@
-﻿namespace MathNet.Symbolics.Tests.Operators.Exponential
+﻿namespace Com.Panotec.MathNet.Symbolics.Tests.Operators.Exponential
 
 open NUnit.Framework
-open MathNet.Symbolics
+open Com.Panotec.MathNet.Symbolics
 
 open Operators
 open VariableSets.Alphabet

@@ -1,4 +1,4 @@
-﻿namespace MathNet.Symbolics.Tests
+﻿namespace Com.Panotec.MathNet.Symbolics.Tests
 
 open NUnitLite
 open System.Reflection

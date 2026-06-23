@@ -1,4 +1,4 @@
-﻿namespace MathNet.Symbolics
+﻿namespace Com.Panotec.MathNet.Symbolics
 
 open System.Collections.Generic
 open MathNet.Numerics

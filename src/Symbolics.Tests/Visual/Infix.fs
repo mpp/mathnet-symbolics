@@ -1,8 +1,8 @@
-﻿namespace MathNet.Symbolics.Tests.Visual
+﻿namespace Com.Panotec.MathNet.Symbolics.Tests.Visual
 
 open NUnit.Framework
 open FsUnitTyped
-open MathNet.Symbolics
+open Com.Panotec.MathNet.Symbolics
 
 open Operators
 open VariableSets.Alphabet
